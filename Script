@@ -10,19 +10,19 @@ local Window = Rayfield:CreateWindow({
       FileName = "Vizen Hub"
    },
    Discord = {
-      Enabled = false,
-      Invite = "VizenHub", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      Enabled = true,
+      Invite = "JgWw4jY8XK", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
-      Title = "Key | Vizen Hub",
+      Title = "Vizen Hub",
       Subtitle = "Key System",
-      Note = "Key: nazif | Join The Discord Server",
-      FileName = "VizenHubKey1", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      Note = "Join The Discord Server",
+      FileName = "VizenHub", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"nazif"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+      Key = {"https://pastebin.com/raw/WDWSWdxA"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
 
@@ -111,3 +111,4 @@ local TPTab = Window:CreateTab("Teleports", nil) -- Title, Image
 local TPSection = TPTab:CreateSection("Teleports")
 
 local TPTab = Window:CreateTab("Misc", nil) -- Title, Image
+local TPSection = TPTab:CreateSection("Misc")
