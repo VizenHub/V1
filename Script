@@ -12,7 +12,7 @@ local Window = Rayfield:CreateWindow({
    Discord = {
       Enabled = true,
       Invite = "JgWw4jY8XK", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+      RememberJoins = false -- Set this to false to make them join the discord every time they load it up
    },
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
@@ -32,7 +32,7 @@ local MainSection = MainTab:CreateSection("Main")
 Rayfield:Notify({
    Title = "Script executed",
    Content = "Vizen Hub",
-   Duration = 5,
+   Duration = 3.5,
    Image = 13047715178,
    Actions = { -- Notification Buttons
       Ignore = {
@@ -45,7 +45,7 @@ Rayfield:Notify({
 })
 
 local Button = MainTab:CreateButton({
-   Name = "Infinite Jump Toggle",
+   Name = "Infinite Jump (Toggle)",
    Callback = function()
        --Toggles the infinite jump between on or off on every script run
 _G.infinjump = not _G.infinjump
@@ -107,8 +107,11 @@ local Input = MainTab:CreateInput({
    end,
 })
 
+
+
 local TPTab = Window:CreateTab("Teleports", nil) -- Title, Image
 local TPSection = TPTab:CreateSection("Teleports")
 
 local TPTab = Window:CreateTab("Misc", nil) -- Title, Image
 local TPSection = TPTab:CreateSection("Misc")
+
