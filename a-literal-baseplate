@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Vizen Hub (In Dev)",
+   Name = "Vizen Hub (a literal baseplate)",
    LoadingTitle = "a literal baseplate",
    LoadingSubtitle = "Made by Zxn",
    ConfigurationSaving = {
@@ -12,13 +12,13 @@ local Window = Rayfield:CreateWindow({
    Discord = {
       Enabled = true,
       Invite = "JgWw4jY8XK", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
-      RememberJoins = false -- Set this to false to make them join the discord every time they load it up
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
       Title = "Vizen Hub",
       Subtitle = "Key System",
-      Note = "Join The Discord Server",
+      Note = "Join Discord Server For Key",
       FileName = "VizenHub", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
@@ -32,7 +32,7 @@ local MainSection = MainTab:CreateSection("Main")
 Rayfield:Notify({
    Title = "Script executed",
    Content = "Vizen Hub",
-   Duration = 3.5,
+   Duration = 5.5,
    Image = 13047715178,
    Actions = { -- Notification Buttons
       Ignore = {
@@ -76,7 +76,7 @@ end
 
 local Slider = MainTab:CreateSlider({
    Name = "WalkSpeed",
-   Range = {1, 350},
+   Range = {1, 500},
    Increment = 1,
    Suffix = "Speed",
    CurrentValue = 16,
@@ -88,7 +88,7 @@ local Slider = MainTab:CreateSlider({
 
 local Slider = MainTab:CreateSlider({
    Name = "JumpPower",
-   Range = {1, 350},
+   Range = {1, 500},
    Increment = 1,
    Suffix = "JumpPower",
    CurrentValue = 16,
@@ -98,20 +98,14 @@ local Slider = MainTab:CreateSlider({
    end,
 })
 
-local Input = MainTab:CreateInput({
-   Name = "Walkspeed",
-   PlaceholderText = "1-500",
-   RemoveTextAfterFocusLost = true,
-   Callback = function(Text)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Text)
-   end,
-})
+local TPTab = Window:CreateTab("Nazif", nil) -- Title, Image
+local TPSection = TPTab:CreateSection("Nazif") 
 
-
-
-local TPTab = Window:CreateTab("Teleports", nil) -- Title, Image
-local TPSection = TPTab:CreateSection("Teleports")
+local TPTab = Window:CreateTab("Others", nil) -- Title, Image
+local TPSection = TPTab:CreateSection("Others")
 
 local TPTab = Window:CreateTab("Misc", nil) -- Title, Image
 local TPSection = TPTab:CreateSection("Misc")
 
+local TPTab = Window:CreateTab("Settings", nil) -- Title, Image
+local TPSection = TPTab:CreateSection("Settings")
