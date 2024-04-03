@@ -1,8 +1,13 @@
+repeat wait() until game:IsLoaded()
+local PlaceId = game.PlaceId
+if PlaceId == 4483381587 then
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/VizenHub/V1/main/Script'))()
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "Vizen Hub (In Dev)",
-   LoadingTitle = "Loading...",
+   LoadingTitle = "a literal baseplate",
    LoadingSubtitle = "Made by Zxn",
    ConfigurationSaving = {
       Enabled = false,
